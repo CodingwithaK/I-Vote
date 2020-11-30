@@ -5,6 +5,7 @@ class CreateStances < ActiveRecord::Migration[6.0]
       t.integer "candidate_id"
       t.integer "stance"
       t.integer "importance"
+      t.integer "issue_id"
       t.timestamps
     end
   end
