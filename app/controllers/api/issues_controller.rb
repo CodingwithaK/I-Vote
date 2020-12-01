@@ -1,6 +1,6 @@
 class Api::IssuesController < ApplicationController
     def index
-        issues = Issues.all
+        issues = Issue.all
         render json: issues
     end
 end

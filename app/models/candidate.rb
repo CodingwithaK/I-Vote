@@ -1,6 +1,9 @@
 class Candidate < ApplicationRecord
-    belongs_to :user , optional: true
-    has_many :issues, through: :stances
+
+    has_many :candidate_users
+    has_many :users, through: :candidate_users
+    
     has_many :stances
+    has_many :issues, through: :stances
 
 end

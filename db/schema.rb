@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_202622) do
+ActiveRecord::Schema.define(version: 2020_11_30_214940) do
+
+  create_table "candidate_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "candidate_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "candidates", force: :cascade do |t|
     t.string "ballot_name"
@@ -18,8 +25,6 @@ ActiveRecord::Schema.define(version: 2020_11_30_202622) do
     t.string "office_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-    t.integer "#<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x00007f9e206dcac0>"
   end
 
   create_table "issues", force: :cascade do |t|

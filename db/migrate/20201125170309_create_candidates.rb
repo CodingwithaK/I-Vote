@@ -4,7 +4,6 @@ class CreateCandidates < ActiveRecord::Migration[6.0]
       t.string "ballot_name"
       t.string "occupation"
       t.string "office_name"
-      t.integer "user_id",
       t.timestamps
     end
   end

@@ -1,6 +1,6 @@
 class Api::CandidatesController < ApplicationController
     def index
-        candidates = Candidates.all
+        candidates = Candidate.all
         render json: candidates
     end
 end
