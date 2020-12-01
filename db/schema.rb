@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_214940) do
+ActiveRecord::Schema.define(version: 2020_12_01_210806) do
 
   create_table "candidate_users", force: :cascade do |t|
     t.integer "user_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_214940) do
   create_table "stances", force: :cascade do |t|
     t.integer "user_id"
     t.integer "candidate_id"
-    t.integer "stance"
+    t.integer "stance_id"
     t.integer "importance"
     t.integer "issue_id"
     t.datetime "created_at", precision: 6, null: false
