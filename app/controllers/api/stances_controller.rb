@@ -6,7 +6,7 @@ class Api::StancesController < ApplicationController
     def create
    
     stance = Stance.create(stance_params)
-    render json: stance
+    render json: stance, methods: :individual_calculator
     end
 
     private

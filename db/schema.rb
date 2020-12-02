@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_210806) do
   create_table "candidate_users", force: :cascade do |t|
     t.integer "user_id"
     t.integer "candidate_id"
+    t.float "percentage"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
