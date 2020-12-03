@@ -5,7 +5,16 @@ class User < ApplicationRecord
     has_many :candidate_users
     has_many :candidates, through: :candidate_users
 
-   
+   def validate_submissions
+    user_made_stances = []
+    user_made_stances << Stance.find_by(user_id:1)
+    if user_made_stances.length >= 7
+        User.first.candidate_calcs
+    else
+        puts "not enough submissions"
+    end
+   end
+
         def candidate_calcs
             
             

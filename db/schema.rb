@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_210806) do
     t.string "ballot_name"
     t.string "occupation"
     t.string "office_name"
+    t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

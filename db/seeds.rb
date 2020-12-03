@@ -10,15 +10,15 @@ Issue.destroy_all
 User.destroy_all
 Stance.destroy_all
 
-User.create(username:"Kristian" )
+User.create(username:"Kristian")
 
-Candidate.create(ballot_name: "David Trone", occupation:"Business Man",office_name:"House Representative")
-Candidate.create(ballot_name: "George Gluck", occupation:"Software Engineer", office_name:"House Representative")
-Candidate.create(ballot_name: "Neil Parrot", occupation:"Traffic Engineer", office_name:"House Representative")
-Candidate.create(ballot_name: "Donald Trump",occupation:"Business Man", office_name:"President")
-Candidate.create(ballot_name: "Joe Biden", occupation:"Politician", office_name:"President")
-Candidate.create(ballot_name: "Jo Jorgensen", occupation:"University Professor", office_name: "President")
-Candidate.create(ballot_name: "Howie Hawkins", occupation:"Enviornmental Activist", office_name: "President")
+Candidate.create(ballot_name: "David Trone", occupation:"Business Man",office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/DAVID_TRONE.jpg")
+Candidate.create(ballot_name: "George Gluck", occupation:"Software Engineer", office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/George_Gluck.jpg")
+Candidate.create(ballot_name: "Neil Parrot", occupation:"Traffic Engineer", office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Neil_Parrott.jpg")
+Candidate.create(ballot_name: "Donald Trump",occupation:"Business Man", office_name:"President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/473px-Official_Portrait_of_President_Donald_Trump.jpg")
+Candidate.create(ballot_name: "Joe Biden", occupation:"Politician", office_name:"President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Official_portrait_of_Vice_President_Joe_Biden.jpg")
+Candidate.create(ballot_name: "Jo Jorgensen", occupation:"University Professor", office_name: "President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/JoJorgensen.png")
+Candidate.create(ballot_name: "Howie Hawkins", occupation:"Enviornmental Activist", office_name: "President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/HowieHawkins.jpg")
 
 Issue.create(title:"Climate Change")
 Issue.create(title:"Healthcare")
