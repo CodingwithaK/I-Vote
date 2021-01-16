@@ -9,6 +9,7 @@ Candidate.destroy_all
 Issue.destroy_all
 User.destroy_all
 Stance.destroy_all
+CandidateUser.destroy_all
 
 User.create(username:"Kristian")
 
