@@ -5,6 +5,9 @@ class User < ApplicationRecord
     has_many :candidate_users
     has_many :candidates, through: :candidate_users
 
+    has_secure_password
+    validates :username, uniqueness: {case_sensetive: false}
+
   
 
         def candidate_calcs
@@ -73,6 +76,8 @@ class User < ApplicationRecord
             @total_possible_points += possible_points
 
         end
+
+  
    
 
 end
