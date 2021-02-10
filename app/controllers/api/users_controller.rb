@@ -1,6 +1,12 @@
 class Api::UsersController < ApplicationController
 #   skips authorization before user signs up
-    skip_before_action :authorized, only:[:create, :auto_login]
+    # skip_before_action :authorized, only:[:create, :auto_login, :index]
+
+    def index 
+        users = User.all
+        render json: users, include: [:candidate_users]
+       
+    end
 
     def profile
         render json:{user: current_user}, status: :accepted
@@ -22,7 +28,6 @@ class Api::UsersController < ApplicationController
         if @user && @user.authenticate(user_login_params[:password])
             token = encode_token({ user_id: @user.id})
             render json: {user: @user, jwt: token}, status: :accepted
-            byebug
         else
             render json: {message: 'Invalid username or password'}, status: :unauthorized
         end

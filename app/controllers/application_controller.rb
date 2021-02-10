@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
     # requires autherization before any request to routes
-    before_action :authorized
+    # before_action :authorized
 
     # takes in a payload in this case it is information related to the user (username and password)
     # returns the token
