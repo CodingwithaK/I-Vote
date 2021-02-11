@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::API
     # requires autherization before any request to routes
-    # before_action :authorized
+    before_action :authorized
 
     # takes in a payload in this case it is information related to the user (username and password)
     # returns the token
     def encode_token(payload)
-        JWT.encode(payload, 'secret')
+        JWT.encode(payload, 's3cr3tc0de')
     end
 
     def auth_header
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::API
             # using the begin/rescue syntax allows us to rescue
             #  out of and exception if the server is passed an invalid token instead of crashing it returns nil
             begin
-            JWT.decode(token,'secret',true, algorithm: 'HS256')
+            JWT.decode(token,'s3cr3tc0de', true, algorithm: 'HS256')
             
             rescue JWT::DecodeError
                 nil

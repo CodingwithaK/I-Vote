@@ -11,7 +11,7 @@ User.destroy_all
 Stance.destroy_all
 CandidateUser.destroy_all
 
-User.create(id:1, username:"Kristian", password:"password")
+
 
 Candidate.create(id:1,ballot_name: "David Trone", occupation:"Business Man",office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/DAVID_TRONE.jpg")
 Candidate.create(id:2,ballot_name: "George Gluck", occupation:"Software Engineer", office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/George_Gluck.jpg")
