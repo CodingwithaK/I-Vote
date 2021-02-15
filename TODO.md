@@ -1,1 +1,2 @@
-- User Authentication JWT Bcrypt
+- User Authentication JWT Bcrypt @done
+- Persistance
