@@ -4,9 +4,8 @@ class Api::StancesController < ApplicationController
         render json: stances, include: :candidate
     end
     def create
-   
     stance = Stance.create(stance_params)
-    render json: stance, methods: :validate_submissions
+    render json: stance, methods: :validate_submissions 
     end
 
     private

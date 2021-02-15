@@ -5,9 +5,11 @@ class Stance < ApplicationRecord
 
     def validate_submissions
         user_made_stances = []
-        user_made_stances << Stance.where(user_id:1)
+      
+        user_made_stances << Stance.where(user_id:user.id)
         if user_made_stances[0].length >= 7
-            User.first.candidate_calcs
+           
+            user.candidate_calcs
         else
             puts "not enough submissions"
         end

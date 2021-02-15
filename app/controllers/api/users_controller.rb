@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
 #   skips authorization before user signs up
-    skip_before_action :authorized, only:[:create, :index, :profile]
+    # skip_before_action :authorize, only:[:create, :index]
 
     def index 
         users = User.all
@@ -8,10 +8,7 @@ class Api::UsersController < ApplicationController
        
     end
 
-    def profile
-        render json:{user: current_user}, status: :accepted
-    end
-
+   
   
     def create
         @user = User.create(user_params)
@@ -29,5 +26,7 @@ class Api::UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :password)
     end
-
+    def encode_token(payload)
+        JWT.encode(payload, Rails.application.secrets.secret_key_base, "HS256")
+      end
 end

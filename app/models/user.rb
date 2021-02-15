@@ -6,7 +6,7 @@ class User < ApplicationRecord
     has_many :candidates, through: :candidate_users
 
     has_secure_password
-    validates :username, uniqueness: {case_sensetive: false}
+    validates :username, uniqueness: true
 
   
 
@@ -18,7 +18,7 @@ class User < ApplicationRecord
             issues = []
             issues << Issue.all
             candidates[0].each do |candidate|
-                
+               
               
                 puts candidate.id
                 @total_points = 0 
@@ -35,7 +35,7 @@ class User < ApplicationRecord
                         if !candidate_stance 
                             byebug
                         end
-                        user_stance = Stance.find_by(issue_id:issue.id,user_id:1)
+                        user_stance = Stance.find_by(issue_id:issue.id,user_id:self.id)
                         importance = user_stance.importance
                         candidate_answer = candidate_stance.stance_id
                         user_answer = user_stance.stance_id
@@ -48,7 +48,7 @@ class User < ApplicationRecord
             puts percentage
         
             
-            CandidateUser.create(candidate_id:c_id,user_id:1,percentage:percentage)
+            CandidateUser.create(candidate_id:c_id,user_id:self.id,percentage:percentage)
             
             end
         end

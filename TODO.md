@@ -1,2 +1,3 @@
 - User Authentication JWT Bcrypt @done
-- Persistance
+- Persistance 
+- validate registration
