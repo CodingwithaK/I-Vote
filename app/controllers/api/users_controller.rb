@@ -1,7 +1,10 @@
 class Api::UsersController < ApplicationController
 #   skips authorization before user signs up
-    # skip_before_action :authorize, only:[:create, :index]
-
+    skip_before_action :authorize, only:[:create, :index]
+    def show
+        @user = User.find(params[:id])
+        render json: @user, include:[:candidate_users]
+    end
     def index 
         users = User.all
         render json: users, include: [:candidate_users]
@@ -24,7 +27,7 @@ class Api::UsersController < ApplicationController
 
     private
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :password, :id)
     end
     def encode_token(payload)
         JWT.encode(payload, Rails.application.secrets.secret_key_base, "HS256")

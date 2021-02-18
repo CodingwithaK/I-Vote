@@ -1,5 +1,5 @@
 class Api::AuthController < ApplicationController
-    # skip_before_action :authorize, only:[:create, :auto_login]
+    skip_before_action :authorize, only:[:create, :auto_login]
     def create
         
         @user = User.find_by(username: user_login_params[:username])
@@ -15,6 +15,7 @@ class Api::AuthController < ApplicationController
     end
 
     def auto_login
+       
         render json: {user: @user, matches: @user.candidate_users}
     end
 

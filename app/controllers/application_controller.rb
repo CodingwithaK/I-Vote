@@ -1,14 +1,14 @@
 class ApplicationController < ActionController::API
     # requires autherization before any request to routes
-   
+   before_action :authorize
     
     def authorize
         # Auth with token
         # see app/services/authorize_request.rb for this code
-        @user = AuthorizeRequest.new(request.headers).user
+        # @user = AuthorizeRequest.new(request.headers).user
         
         # Fake auth
-        # @user = User.first
+        @user = User.first
     
         unless @user
           render json: { error: "Unauthorized request" }, status: :unauthorized
