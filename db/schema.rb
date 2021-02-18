@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_01_18_233842) do
 
   create_table "candidates", force: :cascade do |t|
     t.string "ballot_name"
-    t.string "occupation"
+    t.string "website"
     t.string "office_name"
     t.string "img"
     t.datetime "created_at", precision: 6, null: false

@@ -13,13 +13,13 @@ CandidateUser.destroy_all
 
 
 
-Candidate.create(id:1,ballot_name: "David Trone", occupation:"Business Man",office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/DAVID_TRONE.jpg")
-Candidate.create(id:2,ballot_name: "George Gluck", occupation:"Software Engineer", office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/George_Gluck.jpg")
-Candidate.create(id:3,ballot_name: "Neil Parrot", occupation:"Traffic Engineer", office_name:"House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Neil_Parrott.jpg")
-Candidate.create(id:4,ballot_name: "Donald Trump",occupation:"Business Man", office_name:"President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/473px-Official_Portrait_of_President_Donald_Trump.jpg")
-Candidate.create(id:5,ballot_name: "Joe Biden", occupation:"Politician", office_name:"President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Official_portrait_of_Vice_President_Joe_Biden.jpg")
-Candidate.create(id:6,ballot_name: "Jo Jorgensen", occupation:"University Professor", office_name: "President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/JoJorgensen.png")
-Candidate.create(id:7,ballot_name: "Howie Hawkins", occupation:"Enviornmental Activist", office_name: "President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/HowieHawkins.jpg")
+Candidate.create(id:1,ballot_name: "David Trone", website:"https://trone.house.gov/",office_name:"MD District 6 House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/DAVID_TRONE.jpg")
+Candidate.create(id:2,ballot_name: "George Gluck", website:"https://sites.google.com/prod/view/georgegluck", office_name:"MD District 6 House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/George_Gluck.jpg")
+Candidate.create(id:3,ballot_name: "Neil Parrot", website:"https://www.parrottforcongress.org/homepage", office_name:"MD District 6 House Representative",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Neil_Parrott.jpg")
+Candidate.create(id:4,ballot_name: "Donald Trump",website:"https://www.donaldjtrump.com", office_name:"President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/473px-Official_Portrait_of_President_Donald_Trump.jpg")
+Candidate.create(id:5,ballot_name: "Joe Biden", website:"https://joebiden.com/latest", office_name:"President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Official_portrait_of_Vice_President_Joe_Biden.jpg")
+Candidate.create(id:6,ballot_name: "Jo Jorgensen", website:"https://jo20.com", office_name: "President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/JoJorgensen.png")
+Candidate.create(id:7,ballot_name: "Howie Hawkins", website:"https://howiewebsite", office_name: "President",img:"https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/HowieHawkins.jpg")
 
 Issue.create(id:1,title:"Climate Change")
 Issue.create(id:2,title:"Healthcare")
